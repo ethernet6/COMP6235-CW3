@@ -7,7 +7,10 @@ This web application is entirely cloud and run on Google Cloud Console, features
  - Google App Engine
  - Google Cloud SQL
  
-# Security Practices
+ # How to run web app
+Our web is publically hosted and found on this URL comp6235.georgechalhoub.com. Alternatively, you may clone this reponsitory and follow instructions to run it on your local machine.
+
+ # Security Practices
  - We would never embed authentication information in application source code and requests to do so are denied.  Credentials to access the web application comp6235.georgechalhoub.com defined outside the application using an environment variable.
  
  - The web app is only accessible with HTTPS. HTTP requests are redirected to HTTPS.
