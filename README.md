@@ -29,7 +29,7 @@ Find their help and documentation: https://www.mamp.info/en/documentation/
  4. Run localhost:8888/PHP Source Code or localhost/PHP Source Code 
  
  # Browser Support
- This app is tested and working with the latest version of Google Chome. It should and would well with modern browsers such as Safari, Edge, Firefox. There is absolutely no support for Internet Explorer and this app is not supported on Internet Explorer. 
+ This app is tested and working with the latest version of Google Chome. It should work well with modern browsers such as Safari, Edge, Firefox. There is absolutely no support for Internet Explorer and this app is not tested on any version of Internet Explorer. 
 
 # Group Members
  - George Chalhoub - gc7g17@soton.ac.uk 
