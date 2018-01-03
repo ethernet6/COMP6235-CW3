@@ -7,7 +7,8 @@ This is an application about fuel economy calculation, recommendation and compar
  # How to run web app
 The public web app link will be announed or released few days before the deadline. In the meantime, you will have to run it on your machine by installing and running https://www.mamp.info/en/. 
 
-
+# Confused on how to use MAMP? 
+Find their help and documentation: https://www.mamp.info/en/documentation/
  # Security Practices
  - We would never embed authentication information in application source code and requests to do so are denied.  Credentials to access the web application defined outside the application using an environment variable.
  
