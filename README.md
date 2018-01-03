@@ -4,8 +4,8 @@ This is the repository for the group "404 Group Not Found" which will have the s
 # About web app
 This is an application about fuel economy calculation, recommendation and comparaison. It is written in PHP (backend) and Javascript (frontend). The database used is a MySQL datbase. The code added here is permanent and cannot be removed. 
  
- # How to run web app
-The public web app link will be announed or released few days before the deadline. In the meantime, you will have to run it on your machine by installing and running https://www.mamp.info/en/. 
+ # Public Link for App 
+Self-hosted! The public web app link will be announed or released few days before the deadline. In the meantime, you will have to run it on your machine by installing and running https://www.mamp.info/en/. 
 
 # Confused on how to use MAMP? 
 Find their help and documentation: https://www.mamp.info/en/documentation/
