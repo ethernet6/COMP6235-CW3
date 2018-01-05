@@ -22,7 +22,7 @@ Self-hosted! The public web app is: comp6235.nrhl.org. If you wish to compile an
  
  - The web app is supposed to accessed only with HTTPS. HTTP requests may redirected to HTTPS.
 
- # How to run on your location machine
+ # How to run the app on your local machine
  
 The first thing you need to is install MAMP PRO. It is available at this link: https://www.mamp.info/en/. If you run by problems anywhere check their documentation here: https://www.mamp.info/en/documentation/. 
 
