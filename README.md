@@ -8,8 +8,12 @@ This is an application about fuel economy calculation, recommendation and compar
 The relevant source code can be found inside 'PHP Source Code' which is the source code and base code for our web app! 
 
 # Screenshot
+## Comparaison Page
 ![Comparaison Page Screenshot](https://cdn.georgechalhoub.com/academia/soton/comp6235/assignments/cw3/website/screenshot1.png)
  
+## Recommendation Page
+![Recommendation Page Screenshot](https://cdn.georgechalhoub.com/academia/soton/comp6235/assignments/cw3/website/screenshot2.png)
+
  # Public Link for App 
 Self-hosted! The public web app link will be announed or released few days before the deadline. In the meantime, you will have to run it on your machine by installing and running https://www.mamp.info/en/. 
 
