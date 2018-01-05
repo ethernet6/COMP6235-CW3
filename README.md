@@ -12,7 +12,7 @@ The relevant source code can be found inside 'PHP Source Code' which is the sour
 ![Comparaison Page Screenshot](https://cdn.georgechalhoub.com/academia/soton/comp6235/assignments/cw3/website/screenshot1.png)
  
 ## Recommendation Page
-![Recommendation Page Screenshot](https://cdn.georgechalhoub.com/academia/soton/comp6235/assignments/cw3/website/screenshot2.png)
+![Recommendation Page Screenshot](https://cdn.georgechalhoub.com/academia/soton/comp6235/assignments/cw3/website/screenshot3.png)
 
  # Public Link for App 
 Self-hosted! The public web app link will be announed or released few days before the deadline. In the meantime, you will have to run it on your machine by installing and running https://www.mamp.info/en/. 
