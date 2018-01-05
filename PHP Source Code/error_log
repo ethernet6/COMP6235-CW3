@@ -1,0 +1,4 @@
+[05-Jan-2018 04:22:04 America/Chicago] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'chalhoub_comp623'@'localhost' (using password: YES) in /home/chalhoub/public_html/comp6235/conn.php on line 8
+[05-Jan-2018 04:25:33 America/Chicago] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'chalhoub_comp623'@'localhost' (using password: YES) in /home/chalhoub/public_html/comp6235/conn.php on line 8
+[05-Jan-2018 04:31:41 America/Chicago] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'chalhoub_comp623'@'localhost' (using password: YES) in /home/chalhoub/public_html/comp6235/conn.php on line 8
+[05-Jan-2018 04:34:52 America/Chicago] PHP Parse error:  syntax error, unexpected T_STRING in /home/chalhoub/public_html/comp6235/conn.php on line 2

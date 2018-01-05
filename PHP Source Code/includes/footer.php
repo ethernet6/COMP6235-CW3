@@ -6,21 +6,19 @@
           <div class="grid-third">
             <h4>About us</h4>
             <p>
-              Improved fuel economy saves you money every time you fill up!
+            This is web app for the group "404 Group Not Found" which is a requirement in CW3 in "COMP6235 - Foundations of Data Science".
+
+
             </p>
           </div>          
           <div class="grid-third">
-            <h4>Content Delivery Networks</h4>
+            <h4>More Information</h4>
             <div class="row">
               <div class="grid-half">
                 <ul class="list-unstyled white">
                     
-                  <li><a href="#">Find a Car</a></li>
-            <li><a href="/guides/">Save Money & Fuel</a></li>
-            <li><a href="/tools/">Benefits</a></li>
-            <li><a href="/blog/">My MPG</a></li>
-			<li><a href="/blog/">Advanced Cars & Fuels</a></li>
-			<li><a href="/blog/">About EPA Ratings</a></li>
+                  <li><a href="#">Report</a></li>
+       
                    
                 </ul>
               </div>
@@ -39,15 +37,10 @@
             </div>
           </div>
           <div class="grid-third">
-            <h4>Vehicle Blog</h4>
+            <h4>Contact Us</h4>
             <ul>
               
-              <li><a href="#">Find a Car</a></li>
-            <li><a href="/guides/">Save Money & Fuel</a></li>
-            <li><a href="/tools/">Benefits</a></li>
-            <li><a href="/blog/">My MPG</a></li>
-			<li><a href="/blog/">Advanced Cars & Fuels</a></li>
-			<li><a href="/blog/">About EPA Ratings</a></li>
+              <li><a href="#">Send an email </a></li>
               
             </ul>
           </div>
@@ -60,7 +53,7 @@
     <div>
       <div class="container gray padding-top-small">
         <ul class="list-inline margin-bottom-small gray">
-          <li><small>© 2011-2017 All rights reserved.</small></li>
+          <li><small>© 2018 - 404 Group Not Found - All rights reserved.</small></li>
           <!--<li><small> <a href="http://www.turbobytes.com/">TurboBytes</a></small></li>-->
         </ul>
       </div>

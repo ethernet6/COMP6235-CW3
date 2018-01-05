@@ -26,7 +26,7 @@
   function carsbyyear($year)
   {
   	include("conn.php");
-    $sql = "SELECT * FROM  `$year` LIMIT 0 , 30";
+    $sql = "SELECT * FROM  `$year` ORDER BY Comb_CO2 ASC LIMIT 0 , 30";
 	return $result = $conn->query($sql);
   }
 ?>

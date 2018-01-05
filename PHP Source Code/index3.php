@@ -20,23 +20,23 @@
 <div class="row">
 	<div class="container">
     	  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">GOOD CARS</a></li>
-    <li><a data-toggle="tab" href="#menu1">BETTER CARS</a></li>
-    <li><a data-toggle="tab" href="#menu2">BEST CARS</a></li>
-  </ul>
+    		<li class="active"><a data-toggle="tab" href="#home">GOOD CARS</a></li>
+    		<li><a data-toggle="tab" href="#menu1">BETTER CARS</a></li>
+   			<li><a data-toggle="tab" href="#menu2">BEST CARS</a></li>
+  		  </ul>
 
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <?php include 'goodcars3.php';?>
-    </div>
+  		<div class="tab-content">
+    		<div id="home" class="tab-pane fade in active">
+      			<?php include 'goodcars3.php';?>
+    		</div>
     
-    <div id="menu1" class="tab-pane fade">
-       <?php include 'bettercars3.php';?>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>BEST CARS</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-   </div>
+    	<div id="menu1" class="tab-pane fade">
+      	 <?php include 'bettercars3.php';?>
+   		</div>
+    	<div id="menu2" class="tab-pane fade">
+      	<h3>BEST CARS</h3>
+      	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+   		</div>
   </div>
     </div>
 </div>    

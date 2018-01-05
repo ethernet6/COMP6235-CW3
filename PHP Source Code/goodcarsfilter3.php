@@ -2,7 +2,6 @@
     include("conn.php");
     $type = $_GET['type'];
     $action = $_GET['action'];
-    
     if($type=='make')
     {
       $make = $_GET['make'];
@@ -11,7 +10,7 @@
         $_SESSION['make'][$make] = $make;
         $makes = "";
         foreach ($_SESSION['make'] as $key => $value) {
-          $makes = $value.",";
+          $makes.= $value.",";
         }
       }
       else
@@ -20,7 +19,7 @@
       }
     }
       
-
+    //print_r($_SESSION['make']);
 
     if($type=='fuel')
     {
@@ -81,7 +80,7 @@
           $makes = rtrim($makes,",");
 
         }
-    		$where.= "Make_ID IN ('$makes')";
+    		$where.= "Make_ID IN ($makes)";
 
     	}
     	if($_SESSION['fuelname']!="")
@@ -122,22 +121,26 @@
 					$attribute.="order by Greenhouse_Gas_Score asc";
 				}
 				elseif($_GET['sortbyvalue']=='GHGR_low_to_high'){
-					$attribute.="order by Greenhouse_Gas_Score DESC";
+					$attribute.="order by Greenhouse_Gas_Score DESC RAND()";
 				}
 				else{
-					$attribute = "";
+					$attribute = "order by Comb_CO2 ASC";
 				}
 			}
-		
+		  
+      if($attribute=="")
+      {
+        $attribute = "order by RAND()";
+      }
     	if($where!="")
     	{
-    		 $sql = "$sql where $where $attribute LIMIT 0 , 6";
+    		 $sql = "$sql where $where $attribute LIMIT 0 , 10";
     	}
     	else
     	{
-    		$sql = "$sql $attribute LIMIT 0 , 6";
+    		$sql = "$sql $attribute LIMIT 0 , 10";
     	}
-     // echo $sql;
+     //echo $sql;
 
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {

@@ -184,7 +184,7 @@
         <td><strong>Per Mile</strong></td>
         <td id="veh1_mile"></td>
         <td id="veh2_mile"></td>
-        <td><strong id="saving_mile_dollar" style="display: none;">$</strong><strong id="saving_mile"></strong></td>
+        <td><strong id="saving_mile_dollar" style="display: none;">¢</strong><strong id="saving_mile"></strong></td>
         </tr>
         </table>
         </div>
@@ -226,15 +226,18 @@
 
 
 
+ 
 
-
-<script type="text/javascript">
-  
-</script>
 	  </div>
       </div>
     </div>
-  </div>
+  </div> 
+
+   <!--for the fuel usage-->
+   <?php include("fuelusage.php");?>
+  <!--fuel usage ends-->
+
+
 </div>
 </div>
 </div>

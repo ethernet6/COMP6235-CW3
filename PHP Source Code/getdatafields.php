@@ -34,7 +34,7 @@
 	    	// echo $M_FUEL."*".$X."*".$z;
 
 	    	 $per10year_fuel = round($M_FUEL*$X*$z);
-	    	 $yearly_fuel = round($M_FUEL*$z);
+	    	 $yearly_fuel = round($M_FUEL*$X);
 	    	 $permonth_fuel = round($yearly_fuel/12); 
 	    	 $perweek_fuel = round($yearly_fuel/52);
 	    	 //calculation for fuel usage ends
@@ -42,7 +42,7 @@
 
 
 
-	    	 $jsontypevalue = array("Model"=>$Model,"Make_ID"=>$Make_ID,"Displ"=>$Displ,"Cyl"=>$Cyl,"Fuel"=>$Fuel,"City_MPG"=>$City_MPG,"Hwy_MPG"=>$Hwy_MPG,"Trans"=>$Trans,"Cmb_MPG"=>$Cmb_MPG,"per10year"=>"$".$per10year,"permonth"=>"$".$permonth,"perweek"=>"$".$perweek,"permile"=>"$".$permile,"yearly"=>"$".$R,"per10year_fuel"=>$per10year_fuel,"yearly_fuel"=>$yearly_fuel,"permonth_fuel"=>$permonth_fuel,"perweek_fuel"=>$perweek_fuel,"permile_fuel"=>$permile_fuel);
+	    	 $jsontypevalue = array("Model"=>$Model,"Make_ID"=>$Make_ID,"Displ"=>$Displ,"Cyl"=>$Cyl,"Fuel"=>$Fuel,"City_MPG"=>$City_MPG,"Hwy_MPG"=>$Hwy_MPG,"Trans"=>$Trans,"Cmb_MPG"=>$Cmb_MPG,"per10year"=>"$".$per10year,"permonth"=>"$".$permonth,"perweek"=>"$".$perweek,"permile"=>"¢".$permile,"yearly"=>"$".$R,"per10year_fuel"=>$per10year_fuel,"yearly_fuel"=>$yearly_fuel,"permonth_fuel"=>$permonth_fuel,"perweek_fuel"=>$perweek_fuel,"permile_fuel"=>$permile_fuel);
 	    	 echo json_encode($jsontypevalue);
 	    	
 	    	

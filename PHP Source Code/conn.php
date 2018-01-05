@@ -1,8 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "gauravsunny";
-$password = "test@123";
-$dbname = "engine_save_money";
+# TO DO: Fill authentication information
+$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
+# End TO DO 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

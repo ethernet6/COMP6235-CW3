@@ -20,31 +20,31 @@
         <td><strong id="yearcalfor_fuel">10</strong><strong> Years</strong></td>
         <td id="veh1_10_fuel"></td>
         <td id="veh2_10_fuel"></td>
-        <td><strong id="saving_10_dollar_fuel" style="display: none;">$</strong><strong id="saving_10_fuel"></strong></td>
+        <td><strong id="saving_10_dollar_fuel" style="display: none;"></strong><strong id="saving_10_fuel"></strong></td>
         </tr>
         <tr>
         <td><strong>Yearly</strong></td>
         <td id="veh1_yearly_fuel"></td>
         <td id="veh2_yearly_fuel"></td>
-        <td><strong id="saving_yearly_dollar_fuel" style="display: none;">$</strong><strong id="saving_yearly_fuel"></strong></td>
+        <td><strong id="saving_yearly_dollar_fuel" style="display: none;"></strong><strong id="saving_yearly_fuel"></strong></td>
         </tr>
         <tr>
         <td><strong>Monthly</strong></td>
         <td id="veh1_monthly_fuel"></td>
         <td id="veh2_monthly_fuel"></td>
-        <td><strong id="saving_monthly_dollar_fuel" style="display: none;">$</strong><strong id="saving_monthly_fuel"></strong></td>
+        <td><strong id="saving_monthly_dollar_fuel" style="display: none;"></strong><strong id="saving_monthly_fuel"></strong></td>
         </tr>
         <tr>
         <td><strong>Weekly</strong></td>
         <td id="veh1_weekly_fuel"></td>
         <td id="veh2_weekly_fuel"></td>
-        <td><strong id="saving_weekly_dollar_fuel" style="display: none;">$</strong><strong id="saving_weekly_fuel"></strong></td>
+        <td><strong id="saving_weekly_dollar_fuel" style="display: none;"></strong><strong id="saving_weekly_fuel"></strong></td>
         </tr>
         <tr>
         <td><strong>Per Mile</strong></td>
         <td id="veh1_mile_fuel"></td>
         <td id="veh2_mile_fuel"></td>
-        <td><strong id="saving_mile_dollar_fuel" style="display: none;">$</strong><strong id="saving_mile_fuel"></strong></td>
+        <td><strong id="saving_mile_dollar_fuel" style="display: none;"></strong><strong id="saving_mile_fuel"></strong></td>
         </tr>
         </table>
         </div>

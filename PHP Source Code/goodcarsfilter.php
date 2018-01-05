@@ -111,11 +111,11 @@
 
     	if($where!="")
     	{
-    		$sql = "$sql where $where LIMIT 0 , 2";
+    		$sql = "$sql where $where LIMIT 0 , 10";
     	}
     	else
     	{
-    		$sql = "$sql LIMIT 0 , 2";
+    		$sql = "$sql LIMIT 0 , 10";
     	}
       //echo $sql;
 

@@ -112,6 +112,7 @@
                var peryearcostv1 = parseInt(result[1]);
 
                //fuel selection
+               $("#savings_fuel").show();
                var year10_fuel = $("#veh2_10_fuel").html();
                var peryearcostv2_fuel = parseInt(year10_fuel);
 
@@ -129,7 +130,7 @@
                {
 
                   var muchsaves_10_fuel = peryearcostv2_fuel - peryearcostv1_fuel; 
-                  var whosaves = 'A'; 
+                  var whosaves_fuel = 'A'; 
                   $("#whosaves_fuel").html("A");
                   $("#saving_10_fuel").html(muchsaves_10_fuel);
                }
@@ -321,11 +322,11 @@
           if($("#veh2_mile").html()!="")
            {
                var yearmile = $("#veh2_mile").html();
-               var result=yearmile.split('$');
+               var result=yearmile.split('¢');
                var permilecostv2 = parseInt(result[1]);
 
                var yearmile = $("#veh1_mile").html();
-               var result=yearmile.split('$');
+               var result=yearmile.split('¢');
                var permilecostv1 = parseInt(result[1]);
 
                if(permilecostv1 < permilecostv2)
@@ -866,14 +867,14 @@
                   borderWidth: 0,
                   dataLabels: {
                       enabled: true,
-                      format: '${point.y:.1f}'
+                      format: '¢{point.y:.1f}'
                   }
               }
           },
 
           tooltip: {
               headerFormat: '<span style="font-size:11px"></span><br>',
-              pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>${point.y:.2f}</b> of total<br/>'
+              pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>¢{point.y:.2f}</b> of total<br/>'
           },
           series: [{
               name: '',
@@ -948,6 +949,588 @@
               }]
           }
       });
+
+
+
+      //**********for fuel usage starts
+       /////////////
+           // Create the chart
+      Highcharts.chart('container_fuel', {
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: ''
+          },
+          subtitle: {
+              text: ''
+          },
+          xAxis: {
+              type: 'category'
+          },
+          yAxis: {
+              title: {
+                  text: 'Emission'
+              }
+
+          },
+          legend: {
+              enabled: false
+          },
+          plotOptions: {
+              series: {
+                  borderWidth: 0,
+                  dataLabels: {
+                      enabled: true,
+                      format: '{point.y:.1f}'
+                  }
+              }
+          },
+
+          tooltip: {
+              headerFormat: '<span style="font-size:11px"></span><br>',
+              pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b> of total<br/>'
+          },
+
+          series: [{
+              name: '',
+              colorByPoint: true,
+              data: [{
+                  name: 'Vehicle 1',
+                  y: peryearcostv1_fuel,
+                  drilldown: 'Vehicle 1'
+              }, {
+                  name: 'Vehicle 2',
+                  y: peryearcostv2_fuel,
+                  drilldown: 'Vehicle 2'
+              }, {
+                  name: 'Vehicle '+whosaves_fuel+' Saves',
+                  y: muchsaves_10_fuel,
+                  drilldown: 'Vehicle 2'
+              }
+
+              ]
+          }],
+          drilldown: {
+              series: [{
+                  name: 'Vehicle 1',
+                  id: 'Vehicle 1',
+                  data: [
+                      [
+                          'v11.0',
+                          24.13
+                      ],
+                      [
+                          'v8.0',
+                          17.2
+                      ],
+                      [
+                          'v9.0',
+                          8.11
+                      ],
+                      [
+                          'v10.0',
+                          5.33
+                      ],
+                      [
+                          'v6.0',
+                          1.06
+                      ],
+                      [
+                          'v7.0',
+                          0.5
+                      ]
+                  ]
+              }, {
+                  name: 'Vehicle 2',
+                  id: 'Vehicle 2',
+                  data: [
+                      [
+                          'v12.x',
+                          0.34
+                      ],
+                      [
+                          'v28',
+                          0.24
+                      ],
+                      [
+                          'v27',
+                          0.17
+                      ],
+                      [
+                          'v29',
+                          0.16
+                      ]
+                  ]
+              }]
+          }
+      });
+
+
+
+
+
+
+      //yearly
+      /////////////
+           // Create the chart
+      Highcharts.chart('container_yearly_fuel', {
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: ''
+          },
+          subtitle: {
+              text: ''
+          },
+          xAxis: {
+              type: 'category'
+          },
+          yAxis: {
+              title: {
+                  text: 'Emission'
+              }
+
+          },
+          legend: {
+              enabled: false
+          },
+          plotOptions: {
+              series: {
+                  borderWidth: 0,
+                  dataLabels: {
+                      enabled: true,
+                      format: '{point.y:.1f}'
+                  }
+              }
+          },
+
+          tooltip: {
+              headerFormat: '<span style="font-size:11px"></span><br>',
+              pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b> of total<br/>'
+          },
+          series: [{
+              name: '',
+              colorByPoint: true,
+              data: [{
+                  name: 'Vehicle 1',
+                  y: peryearlycostv1_fuel,
+                  drilldown: 'Vehicle 1'
+              }, {
+                  name: 'Vehicle 2',
+                  y: peryearlycostv2_fuel,
+                  drilldown: 'Vehicle 2'
+              }, {
+                  name: 'Vehicle '+whosaves_fuel+' Saves',
+                  y: muchsaves_yearly,
+                  drilldown: 'Vehicle 2'
+              }
+
+              ]
+          }],
+          drilldown: {
+              series: [{
+                  name: 'Vehicle 1',
+                  id: 'Vehicle 1',
+                  data: [
+                      [
+                          'v11.0',
+                          24.13
+                      ],
+                      [
+                          'v8.0',
+                          17.2
+                      ],
+                      [
+                          'v9.0',
+                          8.11
+                      ],
+                      [
+                          'v10.0',
+                          5.33
+                      ],
+                      [
+                          'v6.0',
+                          1.06
+                      ],
+                      [
+                          'v7.0',
+                          0.5
+                      ]
+                  ]
+              }, {
+                  name: 'Vehicle 2',
+                  id: 'Vehicle 2',
+                  data: [
+                      [
+                          'v12.x',
+                          0.34
+                      ],
+                      [
+                          'v28',
+                          0.24
+                      ],
+                      [
+                          'v27',
+                          0.17
+                      ],
+                      [
+                          'v29',
+                          0.16
+                      ]
+                  ]
+              }]
+          }
+      });
+
+
+
+      //monthly
+      /////////////
+           // Create the chart
+      Highcharts.chart('container_monthly', {
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: ''
+          },
+          subtitle: {
+              text: ''
+          },
+          xAxis: {
+              type: 'category'
+          },
+          yAxis: {
+              title: {
+                  text: 'Emission'
+              }
+
+          },
+          legend: {
+              enabled: false
+          },
+          plotOptions: {
+              series: {
+                  borderWidth: 0,
+                  dataLabels: {
+                      enabled: true,
+                      format: '{point.y:.1f}'
+                  }
+              }
+          },
+
+          tooltip: {
+              headerFormat: '<span style="font-size:11px"></span><br>',
+              pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b> of total<br/>'
+          },
+          series: [{
+              name: '',
+              colorByPoint: true,
+              data: [{
+                  name: 'Vehicle 1',
+                  y: permonthlycostv1_fuel,
+                  drilldown: 'Vehicle 1'
+              }, {
+                  name: 'Vehicle 2',
+                  y: permonthlycostv2_fuel,
+                  drilldown: 'Vehicle 2'
+              }, {
+                  name: 'Vehicle '+whosaves_fuel+' Saves',
+                  y: muchsaves_monthly_fuel,
+                  drilldown: 'Vehicle 2'
+              }
+
+              ]
+          }],
+          drilldown: {
+              series: [{
+                  name: 'Vehicle 1',
+                  id: 'Vehicle 1',
+                  data: [
+                      [
+                          'v11.0',
+                          24.13
+                      ],
+                      [
+                          'v8.0',
+                          17.2
+                      ],
+                      [
+                          'v9.0',
+                          8.11
+                      ],
+                      [
+                          'v10.0',
+                          5.33
+                      ],
+                      [
+                          'v6.0',
+                          1.06
+                      ],
+                      [
+                          'v7.0',
+                          0.5
+                      ]
+                  ]
+              }, {
+                  name: 'Vehicle 2',
+                  id: 'Vehicle 2',
+                  data: [
+                      [
+                          'v12.x',
+                          0.34
+                      ],
+                      [
+                          'v28',
+                          0.24
+                      ],
+                      [
+                          'v27',
+                          0.17
+                      ],
+                      [
+                          'v29',
+                          0.16
+                      ]
+                  ]
+              }]
+          }
+      });
+
+
+
+
+      //weekly
+      /////////////
+           // Create the chart
+      Highcharts.chart('container_weekly_fuel', {
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: ''
+          },
+          subtitle: {
+              text: ''
+          },
+          xAxis: {
+              type: 'category'
+          },
+          yAxis: {
+              title: {
+                  text: 'Emission'
+              }
+
+          },
+          legend: {
+              enabled: false
+          },
+          plotOptions: {
+              series: {
+                  borderWidth: 0,
+                  dataLabels: {
+                      enabled: true,
+                      format: '{point.y:.1f}'
+                  }
+              }
+          },
+
+          tooltip: {
+              headerFormat: '<span style="font-size:11px"></span><br>',
+              pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b> of total<br/>'
+          },
+          series: [{
+              name: '',
+              colorByPoint: true,
+              data: [{
+                  name: 'Vehicle 1',
+                  y: perweeklycostv1_fuel,
+                  drilldown: 'Vehicle 1'
+              }, {
+                  name: 'Vehicle 2',
+                  y: perweeklycostv2_fuel,
+                  drilldown: 'Vehicle 2'
+              }, {
+                  name: 'Vehicle '+whosaves_fuel+' Saves',
+                  y: muchsaves_weekly_fuel,
+                  drilldown: 'Vehicle 2'
+              }
+
+              ]
+          }],
+          drilldown: {
+              series: [{
+                  name: 'Vehicle 1',
+                  id: 'Vehicle 1',
+                  data: [
+                      [
+                          'v11.0',
+                          24.13
+                      ],
+                      [
+                          'v8.0',
+                          17.2
+                      ],
+                      [
+                          'v9.0',
+                          8.11
+                      ],
+                      [
+                          'v10.0',
+                          5.33
+                      ],
+                      [
+                          'v6.0',
+                          1.06
+                      ],
+                      [
+                          'v7.0',
+                          0.5
+                      ]
+                  ]
+              }, {
+                  name: 'Vehicle 2',
+                  id: 'Vehicle 2',
+                  data: [
+                      [
+                          'v12.x',
+                          0.34
+                      ],
+                      [
+                          'v28',
+                          0.24
+                      ],
+                      [
+                          'v27',
+                          0.17
+                      ],
+                      [
+                          'v29',
+                          0.16
+                      ]
+                  ]
+              }]
+          }
+      });
+
+
+
+
+      //miles
+      /////////////
+           // Create the chart
+      Highcharts.chart('container_miles_fuel', {
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: ''
+          },
+          subtitle: {
+              text: ''
+          },
+          xAxis: {
+              type: 'category'
+          },
+          yAxis: {
+              title: {
+                  text: 'Emission'
+              }
+
+          },
+          legend: {
+              enabled: false
+          },
+          plotOptions: {
+              series: {
+                  borderWidth: 0,
+                  dataLabels: {
+                      enabled: true,
+                      format: '{point.y:.1f}'
+                  }
+              }
+          },
+
+          tooltip: {
+              headerFormat: '<span style="font-size:11px"></span><br>',
+              pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b> of total<br/>'
+          },
+          series: [{
+              name: '',
+              colorByPoint: true,
+              data: [{
+                  name: 'Vehicle 1',
+                  y: permilecostv1_fuel,
+                  drilldown: 'Vehicle 1'
+              }, {
+                  name: 'Vehicle 2',
+                  y: permilecostv2_fuel,
+                  drilldown: 'Vehicle 2'
+              }, {
+                  name: 'Vehicle '+whosaves_fuel+' Saves',
+                  y: muchsaves_mile_fuel,
+                  drilldown: 'Vehicle 2'
+              }
+
+              ]
+          }],
+          drilldown: {
+              series: [{
+                  name: 'Vehicle 1',
+                  id: 'Vehicle 1',
+                  data: [
+                      [
+                          'v11.0',
+                          24.13
+                      ],
+                      [
+                          'v8.0',
+                          17.2
+                      ],
+                      [
+                          'v9.0',
+                          8.11
+                      ],
+                      [
+                          'v10.0',
+                          5.33
+                      ],
+                      [
+                          'v6.0',
+                          1.06
+                      ],
+                      [
+                          'v7.0',
+                          0.5
+                      ]
+                  ]
+              }, {
+                  name: 'Vehicle 2',
+                  id: 'Vehicle 2',
+                  data: [
+                      [
+                          'v12.x',
+                          0.34
+                      ],
+                      [
+                          'v28',
+                          0.24
+                      ],
+                      [
+                          'v27',
+                          0.17
+                      ],
+                      [
+                          'v29',
+                          0.16
+                      ]
+                  ]
+              }]
+          }
+      });
+      //**For fuel usage ends
 
 
     }

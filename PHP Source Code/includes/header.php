@@ -80,19 +80,16 @@
 <div id="cont-header">
       <header class="container">
         <nav class="nav-wrap">
-          <a class="logo" href="http://itsjal.com/engine_fuel/">
+          <a class="logo" href="/">
             Fuel WebApp Calculator
           </a>
 
           <ul id="menu-primary" class="nav">
-            <li><a href="#">Find a Car</a></li>
-            <li><a href="/guides/">Save Money & Fuel</a></li>
-            <li><a href="/tools/">Benefits</a></li>
-            <li><a href="/blog/">My MPG</a></li>
-      			<li><a href="/blog/">Advanced Cars & Fuels</a></li>
-      			<li><a href="/blog/">About EPA Ratings</a></li>
+            <li><a href="/guides/">Group Members</a></li>
+            <li><a href="/blog/">CW3 Instructions</a></li>
+      			<li><a href="/blog/">COMP6235 Webpage</a></li>
+      			<li><a href="/blog/">Report</a></li>
           </ul>
-
         </nav>
       </header>
     </div>
