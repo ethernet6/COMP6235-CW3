@@ -20,9 +20,8 @@
 <div class="row">
 	<div class="container">
     	  <ul class="nav nav-tabs">
-    		<li class="active"><a data-toggle="tab" href="#home">GOOD CARS</a></li>
-    		<li><a data-toggle="tab" href="#menu1">BETTER CARS</a></li>
-   			<li><a data-toggle="tab" href="#menu2">BEST CARS</a></li>
+    		<li class="active"><a data-toggle="tab" href="#home">RECOMMENDATIONS</a></li>
+    		<li><a data-toggle="tab" href="#menu1">COMPARAISON</a></li>
   		  </ul>
 
   		<div class="tab-content">

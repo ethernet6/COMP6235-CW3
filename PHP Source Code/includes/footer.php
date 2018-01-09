@@ -11,38 +11,12 @@
 
             </p>
           </div>          
-          <div class="grid-third">
-            <h4>More Information</h4>
-            <div class="row">
-              <div class="grid-half">
-                <ul class="list-unstyled white">
-                    
-                  <li><a href="#">Report</a></li>
-       
-                   
-                </ul>
-              </div>
-              <div class="grid-half">
-                <ul class="list-unstyled white">
-                     
-                  <li><a href="#">Find a Car</a></li>
-            <li><a href="/guides/">Save Money & Fuel</a></li>
-            <li><a href="/tools/">Benefits</a></li>
-            <li><a href="/blog/">My MPG</a></li>
-			<li><a href="/blog/">Advanced Cars & Fuels</a></li>
-			<li><a href="/blog/">About EPA Ratings</a></li>
-                  
-                </ul>
-              </div>
-            </div>
-          </div>
+         
           <div class="grid-third">
             <h4>Contact Us</h4>
-            <ul>
               
-              <li><a href="#">Send an email </a></li>
+              <a href="mailto:gc7g17@soton.ac.uk">Send an email </a>
               
-            </ul>
           </div>
         </div>
       </footer>

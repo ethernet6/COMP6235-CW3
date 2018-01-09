@@ -85,10 +85,10 @@
           </a>
 
           <ul id="menu-primary" class="nav">
-            <li><a href="/guides/">Group Members</a></li>
-            <li><a href="/blog/">CW3 Instructions</a></li>
-      			<li><a href="/blog/">COMP6235 Webpage</a></li>
-      			<li><a href="/blog/">Report</a></li>
+            <li><a href="https://github.com/georgechalhoub/COMP6235-CW3">GitHub Repository</a></li>
+            <li><a href="https://cdn.georgechalhoub.com/academia/soton/comp6235/assignments/cw3/instructions.pdf">CW3 Instructions</a></li>
+      			<li><a href="https://secure.ecs.soton.ac.uk/module/1718/COMP6235/34062/">COMP6235 Webpage</a></li>
+      			<li><a href="https://cdn.georgechalhoub.com/academia/soton/comp6235/assignments/cw3/report.pdf">Report</a></li>
           </ul>
         </nav>
       </header>

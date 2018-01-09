@@ -43,7 +43,7 @@
 								<br>
 								<strong>Emission Score: <?php echo ucfirst($Comb_CO2);?></strong>
 									<br>
-									<strong>Greenhouse Gas Score: <?php echo ucfirst($Greenhouse_Gas_Score);?></strong>
+									<strong>Green Score: <?php echo ucfirst($Greenhouse_Gas_Score);?></strong>
 							</p>
 						</div>
 						<p>
