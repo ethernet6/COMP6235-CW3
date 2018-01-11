@@ -147,8 +147,6 @@
 								<p style="font-size:11px;" id="v1_litre_cyl_trans">Cyl: <?php echo $Cyl;?>, <?php echo $Trans;?> <br>
 									Class: <?php echo ucfirst($Veh_Class);?>
 									<br>
-                  Fuel: <?php echo ucfirst($Fuel);?>
-                  <br>
 									MPG: <?php echo ucfirst($Cmb_MPG);?>
 									<br>
 									Pollution Score: <?php echo ucfirst($Air_Pollution_Score);?>

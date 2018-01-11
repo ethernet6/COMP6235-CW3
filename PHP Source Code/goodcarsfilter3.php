@@ -121,7 +121,7 @@
 					$attribute.="order by Greenhouse_Gas_Score asc";
 				}
 				elseif($_GET['sortbyvalue']=='GHGR_low_to_high'){
-					$attribute.="order by Greenhouse_Gas_Score DESC RAND()";
+					$attribute.="order by Greenhouse_Gas_Score DESC";
 				}
 				else{
 					$attribute = "order by Comb_CO2 ASC";
@@ -160,7 +160,6 @@
 		    	 $Air_Pollution_Score = $row["Air_Pollution_Score"];
 		    	 $Veh_Class = $row["Veh_Class"];
 		    	 $Stnd_Description = $row["Stnd_Description"];
-				 	
 		    	 ?>
 		    	   <div class="col-md-6 main_container_box">
 							<div class="image_container col-sm-6">
@@ -169,11 +168,13 @@
 							<div class="text_container col-sm-6">
 								<h6 id="v1_year_model"><?php echo $sqlvalue;?> <?php echo $Model; ?></h6>
 								<p style="font-size:11px;" id="v1_litre_cyl_trans">Cyl: <?php echo $Cyl;?>, <?php echo $Trans;?> <br>
-									Class: <?php echo ucfirst($Veh_Class);?>
+									<b>Class:</b> <?php echo ucfirst($Veh_Class);?>
+                  <br>
+                  <b>Fuel:</b> <?php echo $Fuel;?>
+                  <br>
+									<b>MPG:</b> <?php echo ucfirst($Cmb_MPG);?>
 									<br>
-									MPG: <?php echo ucfirst($Cmb_MPG);?>
-									<br>
-									Pollution Score: <?php echo ucfirst($Air_Pollution_Score);?>
+									<b>Pollution Score:</b> <?php echo ucfirst($Air_Pollution_Score);?>
 									<br>
 								    <strong>Emission Score: <?php echo ucfirst($Comb_CO2);?></strong>
 									<br>
@@ -181,7 +182,7 @@
 								</p>
 							</div>
 							<p>
-								Description: <?php echo $Stnd_Description;?>
+								<b>Description:</b> <?php echo $Stnd_Description;?>
 							</p>
 						</div>	
 		    	 <?php 

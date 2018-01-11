@@ -1,17 +1,36 @@
-<?php @session_start();
-@$_SESSION['year'] = "";
-@$_SESSION['make'] = "";
-@$_SESSION['fuelname'] = "";
+<?php session_start();
+ include("includes/header.php");
+$_SESSION['year'] = "";
+$_SESSION['make'] = "";
+$_SESSION['fuelname'] = "";
 ?>  
+    <div id="cont-masthead">
+      <div class="container">
+        
+        <h1>How much can I save fuel? </h1>
+        <p>Fuel economy calculator</p>
+      </div>
+    </div>
+<!--Header End-->
+<!--main content start-->
 <div class="row">
-  <div class="container">
-      <div class="col-lg-12">
-          <strong><p class="text-center">Find Good Cars</p></strong>
-        </div>  
-</div>  
+	<div class="container">
+		<div class="col-lg-12">
+    		<h1>Save Money</h1>
+    		<h4>Improved fuel economy saves you money every time you fill up!</h4>
+    		<p>A vehicle that gets 30 MPG will cost you $625 less to fuel each year than one that gets 20 MPG (assuming 15,000 miles of driving annually and a fuel cost of $2.50). Over a period of 5 years, the 30-MPG vehicle will save you $3,125.</p></div>
+		</div>
+	</div>
+</div>	
+<div class="row">
+	<div class="container">
+    	<div class="col-lg-12">
+        	<strong><p class="text-center">Find Good Cars</p></strong>
+        </div>	
+</div>	
 
 <script type="text/javascript">
-  function fuelselection(fuelname)
+	function fuelselection(fuelname)
     {
         if(document.getElementById(fuelname).checked==true)
         {
@@ -23,7 +42,7 @@
         }
 
         $.ajax({
-        url:"goodcarsfilter3.php",
+        url:"goodcarsfilter.php",
         type:"GET",
         data:{
           fuelname:fuelname,
@@ -43,7 +62,7 @@
 
 
 <script type="text/javascript">
-  function yearselection(yearval)
+	function yearselection(yearval)
     {
         if(document.getElementById("year#"+yearval).checked==true)
         {
@@ -54,7 +73,7 @@
           var action = "remove";
         }
         $.ajax({
-        url:"goodcarsfilter3.php",
+        url:"goodcarsfilter.php",
         type:"GET",
         data:{
           year:yearval,
@@ -73,7 +92,7 @@
 
 
 <script type="text/javascript">
-  function makeselection(makeid)
+	function makeselection(makeid)
     {
         if(document.getElementById("make#"+makeid).checked==true)
         {
@@ -85,7 +104,7 @@
         }
 
         $.ajax({
-        url:"goodcarsfilter3.php",
+        url:"goodcarsfilter.php",
         type:"GET",
         data:{
           make:makeid,
@@ -100,7 +119,7 @@
        }
       });
     }
-  
+	
 </script>
 
 
@@ -143,17 +162,12 @@
                 <p class="sidebar_sub_heading">Fuel</p>
                 <ul class="sidebar_list">
                     <li>
-                      <input type="checkbox" id="Electricity" value="Electricity" onclick="fuelselection(this.value);"> Electric
+                      <input type="checkbox" id="Electric" value="Electric" onclick="fuelselection(this.value);"> Electric
                     </li>
 
                     <li>
                       <input type="checkbox" id="Gasoline" value="Gasoline" onclick="fuelselection(this.value);"> Gasoline
                     </li>
-
-                    <li>
-                      <input type="checkbox" id="Gasoline/Electricity" value="Gasoline/Electricity" onclick="fuelselection(this.value);"> Gasoline/Electricity
-                    </li>
-                    
                 </ul>
 
 
@@ -161,44 +175,20 @@
            </div>
            <div class="col-md-8">
                 <h4>Real Calculation</h4>
-        <div class="container">
-          <div class="col-md-12 search_form_container">
-           <select id="fuel_sorting" style="width:190px;" onchange="sort(this.value);">
-                <option value="Default">Default</option>
-                <option value="Emission_low_to_high">Emission low to high</option>
-                <option value="Emission_high_to_low">Emission high to low</option>
-                <option value="GHGR_high_to_low">Green high to low</option>
-                <option value="GHGR_low_to_high">Green low to high</option>
-              </select>
-          </div>
-        </div>
-        <div class="container" id="goodcarsstock">
+				<div class="container">
+					<div class="col-md-12 search_form_container">
+						<input class="search_field" type="text" placeholder="Search">
+						<input class="search_button" type="submit" value="Search">
+					</div>
+				</div>
+				<div class="container" id="goodcarsstock">
 
-        <?php include('goodcars_starttabs.php');?>
-          <!--BLOCK3 ENDS-->
-        </div>  
+				<?php include('goodcars_starttabs.php');?>
+					<!--BLOCK3 ENDS-->
+				</div>	
            </div>
        </div>
     </div>
 </div>
 <!--main content ends-->
-
-<script>
-function sort(valuesort) {
- $.ajax({
-        url:"goodcarsfilter3.php",
-        type:"GET",
-        data:{
-      sortbyvalue:valuesort,
-          type:"sort",
-        },
-        success:function(response) {
-         document.getElementById("goodcarsstock").innerHTML =response;
-       },
-       error:function(){
-        alert("error");
-       }
-      });
-    }
-</script>
-
+<?php include("includes/footer.php");?>
